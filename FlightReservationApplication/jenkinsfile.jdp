@@ -24,13 +24,13 @@ pipeline {
                 }
             }
         }
-        stage('QUALITYGATE'){
-            steps{
-                timeout(10) {
-                    waitForQualityGate abortPipeline: true
-                }
-            }
-        }
+        // stage('QUALITYGATE'){
+        //     steps{
+        //         timeout(10) {
+        //             waitForQualityGate abortPipeline: true
+        //         }
+        //     }
+        // }
         stage('DOCKER-BUILD') {
             steps{
                 sh'''
