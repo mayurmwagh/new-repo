@@ -37,7 +37,7 @@ pipeline {
                     cd FlightReservationApplication
                     docker build . -t mayurwagh/josh-app:latest
                     docker push mayurwagh/josh-app:latest
-                    docker rmi `docker image list -aq`
+                    docker rmi mayurwagh/josh-app:latest
                 '''
             }
         }
